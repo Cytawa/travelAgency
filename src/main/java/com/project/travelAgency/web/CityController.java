@@ -30,6 +30,11 @@ public class CityController {
 
         return ResponseEntity.ok(cityService.findAll());
     }
+    @GetMapping("/f/{fl}")
+    public ResponseEntity<List<City>> findByP(@PathVariable String fl) {
+
+        return ResponseEntity.ok(cityService.findByP(fl));
+    }
 
     @Secured("ROLE_ADMIN")
     @PostMapping

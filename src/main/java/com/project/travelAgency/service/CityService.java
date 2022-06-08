@@ -29,6 +29,9 @@ public class CityService {
     public List <City> findCitiesByCountries_Name (String country){
         return cityRepo.findCitiesByCountry_Name(country);
     }
+    public List<City> findByP(String firstletter){
+        return cityRepo.myOwnQuery(firstletter);
+    }
 
 
     public boolean deleteById(Long id) {
